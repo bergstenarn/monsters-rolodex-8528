@@ -5,17 +5,30 @@ import "./App.css";
 class App extends Component {
   constructor() {
     super();
+
     this.state = {
-      name: "Anders",
+      name: { firstName: "Anders", lastName: "Svensson" },
+      company: "ZTM",
     };
   }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hello {this.state.name}</p>
-          <button onClick={() => this.setState({ name: "Plutte" })}>
+          <p>
+            Hi {this.state.name.firstName} {this.state.name.lastName}, I work at{" "}
+            {this.state.company}
+          </p>
+          <button
+            onClick={() => {
+              this.setState({
+                name: { firstName: "Plutte", lastName: "Pelle" },
+              });
+              console.log(this.state);
+            }}
+          >
             Change name
           </button>
         </header>
