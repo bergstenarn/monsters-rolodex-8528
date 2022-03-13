@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 export default class CardList extends Component {
   render() {
-    console.log("render");
+    console.log("render from CardList");
+    console.log(this.props.monsters);
+
     const { monsters } = this.props;
 
     return (
