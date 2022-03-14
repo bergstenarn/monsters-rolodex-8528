@@ -4,6 +4,7 @@ import SearchBox from "./components/SearchBox/SearchBox";
 import "./App.css";
 
 const App = () => {
+  console.log("render");
   const [searchField, setSearchField] = useState("");
   console.log(searchField);
 
